@@ -1,0 +1,418 @@
+## Please update the OBject Repository Screen-wise, to avoid duplicate object updating.
+## Object name should be of the below pattern 
+##salesforceUser=id>username or salesforceUser=name>username or salesforcePwd=xpath>//input[@id='username'] or CSS>#username so on...
+##   
+#SF user menu page
+PhoneField=xpath>//td[contains(@class,'PhoneNumberElement')]
+
+#CPQ Objects
+#***************************************
+# SF - Account Details Page
+compnyPhNum_AcctDetailsPage=xpath>//td[text()='Company Phone']/following-sibling::td[1]
+DIADAcctID_AcctDetailsPage=xpath>//td[text()='DIAD Account ID']/following-sibling::td[1]
+GhostAcctID_AcctDetailsPage=xpath>//td[text()='Ghost Account ID']/following-sibling::td[1]
+BusinessID_AcctDetailsPage=xpath>//td[text()='Business ID']/following-sibling::td[1]/div
+ContactsLink__AcctDetailsPage=xpath>(//span[contains(text(),'Contacts')])[1]
+NewContactBtn__AcctDetailsPage=xpath>(//tr/td[2]/input[@name='newContact'])[1]
+BusinessName_AcctDetailsPage=xpath>//td[text()='Company Name']/following-sibling::td[1]/div
+
+#SF - Contact Edit Page
+FirstName_ContactEdit=xpath>//label[text()='First Name']//parent::td//following-sibling::td[1]/input
+LastName_ContactEdit=xpath>//label[text()='Last Name']//parent::td//following-sibling::td[1]/div/input
+ContactPhoneNo_ContactEdit=xpath>//label[text()='Contact Phone']//parent::td//following-sibling::td[1]/input
+ContactEmail_ContactEdit=xpath>//label[text()='Contact Email']//parent::td//following-sibling::td[1]/input
+SaveBtn_ContactEdit=xpath>//td[@id='topButtonRow']//input[@name='save']
+
+#Contact Detail Page
+MakePrimContact=xpath>//td[@id='topButtonRow']//input[@name='make_primary_contact']
+VerifyPrimaryContact=xpath>//td[text()='Primary contact']//parent::tr//descendant::img
+CompanyName=xpath>//tr/td[text()='Company Name']//following-sibling::td[1]/div
+
+
+#Opportunity Details page
+Opptlink=xpath>//span[text()='Opportunity']//parent::td/following-sibling::td[1]//descendant::a
+Quote=xpath>//th[contains(text(),'Quote Number')]//parent::tr//following-sibling::tr[1]/th/a
+Product=xpath>//th[contains(text(),'Product')]//parent::tr//following-sibling::tr[1]/th/a
+AddedProduct=xpath>//th[contains(text(),'Product')]//parent::tr//following-sibling::tr/th/a[contains(text(),'"+ProdName+"')]
+CheckBox=xpath>//th[contains(text(),'Quote Number')]//parent::tr//following-sibling::tr[1]/td[5]/img
+ShowMore=xpath>//div/a[contains(text(),'Show')]
+NewQuote=xpath>//h3[text()='Quotes']/parent::td/following-sibling::td[@class='pbButton']
+ProbabilityPercent=xpath>//td[contains(text(),'Probability')]/following-sibling::td/div
+
+#--------------------------Account Detail Page-----------------------
+
+//Contracts=xpath>//a[@class='linklet']/span[contains(text(),'Contracts')]
+ContractsLink=xpath>//span[contains(text(),'Contracts')]/parent::a[@class='linklet']
+
+ContractNolink=xpath>//th[contains(text(),'Contract Number')]//ancestor::tr[@class='headerRow']//following::tr[1]/th/a
+
+Contracts=xpath>//a[@class='linklet']/span[contains(text(),'Contracts')]
+#--------------------------Contract Detail Page-----------------------
+
+Amend=xpath>//h2[text()='Contract Detail']//parent::td//following-sibling::td//child::input[@name='sbqq__amend']
+Amend2=xpath>//input[@value='Amend']
+
+#Edit Quote Page
+AddProdBtn=xpath>//paper-button[text()='Add Products']
+SaveBtn=xpath>//paper-button[text()='Save']
+QuickSavebtn=xpath>//paper-button[text()='Quick Save']
+Calculatebtn=xpath>//paper-button[text()='Calculate']
+ProdDrawer=xpath>//div[contains(text(),'Monthly Investment')]/following-sibling::div/span
+#//span[contains(text(),'Monthly Investment')]//ancestor::sb-group/parent::div/following-sibling::div/span
+FutureStartDate1=//div[text()=
+FutureStartDate2=]//ancestor::sf-le-table-row/following-sibling::div[1]/descendant::div[contains(text(),'Future Start')]/parent::div/child::sb-field
+CalendarIcon=xpath>//sb-datepicker/span/div/span
+CalMnthNavRt=xpath>//div[@id='month']//child::span[3]
+LessThirtyDays=xpath>//div[contains(@class,'selected')]/following::div[1]
+GrtrThirtyDays=xpath>//div[contains(@class,'current')]/following::div[1]
+QuickSave=xpath>//paper-button[text()='Quick Save']
+FutStrtValMsg=xpath>//h2[contains(text(),'Future')]
+FStrtNotifyCls=xpath>//sb-toast[@type='error']//button/i
+Price=xpath>//div[@class='td groupDetails style-scope sb-le-summary-row']/child::sb-le-summary-cell[4]//descendant::div[@class='style-scope sb-div']
+Tax=xpath>//div[@class='td groupDetails style-scope sb-le-summary-row']/child::sb-le-summary-cell[5]//descendant::div[@class='style-scope sb-div']
+MSMoreOptionArrow=xpath>//div[text()='Managed Search']//parent::div//following-sibling::div[5]//descendant::span
+SSMoreOptionArrow=xpath>//div[text()='Site + Search']//parent::div//following-sibling::div[5]//descendant::span
+#MonthlyInv=xpath>//div[contains(text(),'Presence')]/parent::div/following-sibling::div[@index='3']/div
+MonthlyInv=xpath>//div[contains(text(),'Presence')]/parent::div/following-sibling::div[@index='3']/div[starts-with(text(),'$')]
+
+RecommendAlert=xpath>//sb-i18n[text()='Alert']//ancestor::header/following-sibling::div//descendant::ul/ul
+AlertContinueBtn=xpath>//sb-i18n[text()='Continue']
+QE_Primarychkbox=xpath>//input[@id='00N0S000001F9V1']
+ProductSD=xpath>//div[contains(@class,'tbody')]/sb-table-row[@name='Site + Display']
+ProductSS=xpath>//div[contains(@class,'tbody')]/sb-table-row[@name='Site + Search']
+ProductSSOcial=xpath>//div[contains(@class,'tbody')]/sb-table-row[@name='Site + Social']
+ProductListing=xpath>//div[text()='Listings Management']
+ProductReview=xpath>//div[text()='Reviews']
+ProductReputation=xpath>//div[text()='Reputation']
+SuggestBtn=xpath>//footer/paper-button/sb-i18n[text()='Suggest']
+MonthlyInvFoun=xpath>//div[contains(text(),'Presence')]/parent::div/following-sibling::div[@index='3']/div
+
+
+#Product Selection Page in Quotes
+AddListingmgmtCB=xpath>//span[text()='Listings Management']//ancestor::sb-swipe-container//descendant::paper-checkbox
+AddProductCBDynamic1=//span[text()=
+AddProductCBDynamic2=]//ancestor::sb-swipe-container//descendant::paper-checkbox
+AddWebsiteCB=xpath>//span[contains(text(),'Website')]//ancestor::sb-swipe-container//descendant::paper-checkbox
+AddWebsiteCBDynamic1=//span[contains(text(),
+#AddWebsiteCBDynamic2=)]//ancestor::sb-swipe-container//descendant::paper-checkbox
+AddProWebCBDynamic2=]//ancestor::sb-swipe-container//descendant::paper-radio-button//div[@id='radioContainer']/div
+AddReviewCB=xpath>//span[contains(text(),'Reviews')]//ancestor::sb-swipe-container//descendant::paper-checkbox
+
+SelectProdBtn=xpath>//sb-i18n[text()='Select']
+FilterBtn=xpath>//paper-button[@id='fb']
+ProdNameTextBox=xpath>//sb-filter-item[@label='Product Name']//descendant::div/sb-input/input
+ApplyBtn=xpath>//paper-button[@id='submit']//child::sb-i18n[text()='Apply'] 
+
+Prodname=xpath>//span[text()='Website (Beta)']
+prodname1=xpath>//span[text()=
+prodname2=]
+
+ListingManagement=xpath>//span[text()='Guaranteed Clicks']
+ListingManagementAI=xpath>//span[text()='Listings Management - Additional Instances']
+
+
+#Configure Products Page
+AddProWebCB=xpath>//span[text()='Pro Website']//ancestor::sb-swipe-container//descendant::paper-checkbox
+AddProWebCBDynamic1=//span[text()=
+AddProWebCBDynamic2=]//ancestor::sb-swipe-container//descendant::paper-radio-button//div[@id='radioContainer']/div
+#Save=xpath>//sb-i18n[text()='Cancel']//parent::paper-button//parent::div//following-sibling::paper-button/sb-i18n[text()='Save']
+Save=xpath>//sb-i18n[text()='Cancel']//parent::paper-button//parent::div//following-sibling::paper-button/sb-i18n[text()='Save']
+Budget=xpath>//ancestor::sb-product-feature[@name='Mobile Boost']//descendant::sb-option-cell[@item='record.CPQ_Budget__c']//descendant::span/child::div[2]/child::span
+SearchConfig=xpath>//span[contains(text(),'MANAGED')]//ancestor::sb-swipe-container//descendant::sb-actions
+ComboBudget=xpath>//h2[text()='Mobile']//parent::header/following-sibling::div[@id]//descendant::sb-option-cell[7]//descendant::div[contains(@class,'empty')]
+
+#-----------------------------------------------------------------------
+
+#New Object Start
+MinBudgetDynamic1=//span[text()=
+MinBudgetDynamic2=]//ancestor::sb-option-cell//following-sibling::sb-option-cell[contains(@field-label,'Minimum')]//descendant::span//descendant::span
+BudgetTADynamic1=//span[text()=
+BudgetTADynamic2=]//ancestor::sb-option-cell//following-sibling::sb-option-cell[@field-label='Budget']//descendant::div[2]/span
+#New object End
+SearchConfig=xpath>//span[contains(text(),'MANAGED')]//ancestor::sb-swipe-container//descendant::sb-actions
+SUF=xpath>//h2[text()='One Time Fee']/parent::header/following-sibling::div[@id='feature-body']/descendant::sb-option-cell[contains(@item,'Set_Up')]/descendant::span/div/span
+ConfIcon=xpath>//span[contains(@class,'td sb-action') and not(contains(@class,'visibilityHidden'))]
+ReConfIcon=xpath>//button[@name='Reconfigure Line']
+CheckedProWeb=xpath>//span[text()='Pro Website']//ancestor::div[@id='rowDiv']//preceding-sibling::div[@id='selectionContainer']//descendant::div[@id='checkboxContainer']
+CheckedStdWeb=xpath>//span[text()='Standard Website']//ancestor::div[@id='rowDiv']//preceding-sibling::div[@id='selectionContainer']//descendant::div[@id='checkboxContainer']
+CheckProWeb=xpath>//span[text()='Pro Website']//ancestor::div[@id='rowDiv']//preceding-sibling::div[@id='selectionContainer']//descendant::div[@id='checkboxContainer']
+CheckStdWeb=xpath>//span[text()='Standard Website']//ancestor::div[@id='rowDiv']//preceding-sibling::div[@id='selectionContainer']//descendant::div[@id='checkboxContainer']
+SitePlusRadioBtn1=//span[text()=
+SitePlusRadioBtn2=]//ancestor::div[@id='rowDiv']//preceding-sibling::div[@id='selectionContainer']//descendant::div[@id='radioContainer']
+
+#Configure Products page website next-gen product objects path
+StarterWebsite=xpath>//span[text()='Starter Website']
+Prowebsite=xpath>//span[text()='Pro Website']
+StandardWS=xpath>//span[text()='Standard Website']
+StandardWSSB=xpath>//span[text()='Standard Website - Spread Billing']
+ProwebsiteSB=xpath>//span[text()='Pro Website - Spread Billing']
+ManagedSearch=xpath>//span[text()='Managed Search']
+GuaranteedClicks=xpath>//span[text()='Guaranteed Clicks']
+
+#----------------------------------------------------------------
+ProductSS=xpath>//span[text()='Site + Search']
+ProductSSOcial=xpath>//span[text()='Site + Social']
+ProductSD=xpath>//span[text()='Site + Display']
+RdioBtnSS=xpath>//span[text()='Site + Search']//ancestor::div[@class='style-scope sb-table-row']/child::div[1]
+ConfigureIconSS=xpath>//span[contains(@class,'td sb-action') and not(contains(@class,'visibilityHidden'))]
+StandardWebsite=xpath>//span[text()='Standard Website']
+SWUnitPrice=xpath>//span[text()='$69.99']//ancestor::div[@class='style-scope sb-group --desktop']/child::div/descendant::sb-field[5]//child::span//descendant::span
+ProWebsite=xpath>//span[text()='Pro Website']
+PWUnitPrice=xpath>//span[text()='$99.99']//ancestor::div[@class='style-scope sb-group --desktop']/child::div/descendant::sb-field[5]//child::span//descendant::span
+UnitPrice=xpath>//span[text()='$99.00']//ancestor::div[@class='style-scope sb-group --desktop']/child::div/descendant::sb-field[5]//child::span//descendant::span
+SBRedioBtn=xpath>//span[text()='$69.99']//ancestor::div[@class='style-scope sb-group --desktop']//ancestor::div[@class='style-scope sb-table-row']/child::div[@class='style-scope sb-table-row td']/descendant::sb-group
+ProWebsiteRBtn=XPath>//span[text()='$99.99']//ancestor::div[@class='style-scope sb-group --desktop']//ancestor::div[@class='style-scope sb-table-row']/child::div[@class='style-scope sb-table-row td']/descendant::sb-group
+ManagedSearchCB=xpath>//span[text()='Managed Search']//ancestor::div[@class='style-scope sb-table-row']/child::div[1]
+GuaranteedClicksCB=xpath>//span[text()='Guaranteed Clicks']//ancestor::div[@class='style-scope sb-table-row']/child::div[1]
+MinimunBudgetManagedSearch=xpath>//span[text()='Managed Search']//ancestor::div[@class='style-scope sb-table-row']//child::div[3]//descendant::sb-option-cell[6]
+
+GuaranteedClicksConfigureIcon=xpath>//span[contains(@class,'td sb-action') and not(contains(@class,'visibilityHidden'))] 
+
+#----------------------------------------------------------------------------------
+
+#Quote Details Page
+QuoteHdr=xpath>//h1[text()='Quote']//following-sibling::h2
+QuoteNumb=xpath>//td[text()='Quote Number']//ancestor::table[@class='detailList']//descendant::div[contains(text(),'Q-')]
+SalesRep=xpath>//span[text()='Sales Rep']//parent::td//following-sibling::td//descendant::a
+LoginAsUserName=xpath>//div[contains(@title,'User menu')]//descendant::span
+SubTerm=xpath>//span[text()='Subscription Term']//parent::td/parent::tr//child::td[2]/div
+QuoteType=xpath>//span[text()='Type']//parent::td//following-sibling::td/div
+QuoteStatus=xpath>//span[text()='Status']//parent::td//following-sibling::td/div
+EditLinesBtn=xpath>//ancestor::div[@class='pbHeader']//descendant::input[@title='Edit Lines']
+QD_Edit_Btn=xpath>//input[@name='edit']
+QE_savebtn=xpath>//input[@name='save']
+OrderStageValue=xpath>//td[text()='Order Stage']/following-sibling::td/div
+OpptyNameValue=xpath>//span[text()='Opportunity']//parent::td/following-sibling::td[1]//child::a
+BusinessNameValue=xpath>//span[text()='Account']//parent::td/following-sibling::td[1]//child::a
+SelectConsultnBtn=xpath>//parent::td[@id='topButtonRow']//input[@title='Select Consultation']
+PaymentBtn=xpath>//parent::td[@id='topButtonRow']//input[@title='Payment']
+SubmitQteBtn=xpath>//td[@id='topButtonRow']//input[@title='Submit Quote']
+OneTimeFeeTotal=xpath>//td[text()='One Time Fee Total']/following-sibling::td/div
+
+TotalOTFFinalEditQuote=xpath>(//div[@id='datatable']//child::sb-le-summary-row//div[@class='style-scope sb-div'])[1]
+TotalMITFinalEditQuote=xpath>(//div[@id='datatable']//child::sb-le-summary-row//div[@class='style-scope sb-div'])[2]
+TotalTaxFinalEditQuote=xpath>(//div[@id='datatable']//child::sb-le-summary-row//div[@class='style-scope sb-div'])[3]
+AccLink=xpath>//span[text()='Account']/parent::td/following-sibling::td[1]/div/a
+
+#capturesignature-Authourization method
+captureText=xpath>//div[@class='section slds-show']//descendant::b
+ReturnToQuote=xpath>//div[@class='slds-card__body slds-p-around_large']//descendant::input[@value='Return to Quote']
+
+CaptureQuote_VV=xpath>//div[@data-section='Voice Verify']//child::div/div[1]
+CaptureOTF_VV=xpath>//div[@data-section='Voice Verify']//child::div/div[3]
+CaptureMIT_VV=xpath>//div[@data-section='Voice Verify']//child::div/div[4]
+
+#Select consultation Page
+GoBtn=xpath>//input[@value='Go']
+SelectBtn1=xpath>//input[contains(@id,':0:')]
+TimeZoneValueSelect1=xpath>//input[contains(@id,':0:')]//ancestor::td/preceding-sibling::td[1]
+TimeSelect1=xpath>//input[contains(@id,':0:')]//ancestor::td/preceding-sibling::td[2]
+DateSelect1=xpath>//input[contains(@id,':0:')]//ancestor::td/preceding-sibling::td[3]
+#ScheduleErrMsg=xpath>//span/div/label[@class='slds-form-element__label slds-text-body_regular']
+ScheduldSuccessMsg=xpath>//div[@id='selected_scheduled']/article/div/span
+#DateSelect1=xpath>//input[contains(@id,':0:')]//ancestor::tr/child::td[1]
+#TimeSelect1=xpath>//input[contains(@id,':0:')]//ancestor::tr/child::td[2]
+#TimeZoneValueSelect1=xpath>//input[contains(@id,':0:')]//ancestor::tr/child::td[3]
+savePOS=xpath>//div[@id='pos']//button[contains(text(),'Save')]
+CapturePhoneNo_POS=xpath>//input[@id='consultationPage:consultationFrom:pos_phone_no']
+CapturePhoneNo_SCh=xpath>//input[@id='consultationPage:consultationFrom:phone_no']
+phone_SelectConsultn=xpath>//input[@id='consultationPage:consultationFrom:phone_no']
+ConstNotes=xpath>//textarea[@id='consultationNotes']
+SchConstSave=xpath>//script/following-sibling::input[@value='Save']
+ScheduleErrMsg=xpath>//label[contains(@class,'slds-text') and not(contains(@for,'phone'))]
+
+#Selected consulted Page
+rsltPhoneNum=xpath>//div[@id='consPhone']
+rsltDate=xpath>//div[@id='consDate']
+rsltTime=xpath>//div[@id='consTime']
+rsltConstNotes=xpath>//div[@id='consNotes']
+ValidationMsg=xpath>//span[contains(@id,'consultationPage:consultationFrom:dataTableMessages')]
+MsgrsltTimeZone=xpath>//div[@id='consTimeZone']
+SaveBtnSelectedPage=xpath>//div[@id='selected_scheduled']//button[contains(text(),'Save')]
+SaveBtnPOSPage=xpath>//div[@id='pos']//button[contains(text(),'Save')]
+
+#Payment info page
+ConfirmPaymtAmtPaymtPg=xpath>//span[contains(@id,'confirmation_payment_amount')]
+ConfirmPhoneNumPaymtPg=xpath>//span[contains(@id,'confirmation_phone_no')]
+RegistrnPaymtAmtPaymtPg=xpath>//span[contains(@id,'register_payment_amount')]
+RegistrnPhoneNumPaymtPg=xpath>//span[contains(@id,'registration_phone_no')]
+ValidatBtnPaymentPg=xpath>//button[contains(text(),'Validate Confirmation')]
+ConfirmMsgPaymentPG=xpath>//div[@id='confirmation_section']//following-sibling::span[@id='paymentPage:paymentForm:confirm_no_success']/div[2]
+SaveBtnPaymentPG=xpath>//input[@id='paymentPage:paymentForm:confirmation_save']
+
+#
+
+#Ghost XL - Confirmation/Registration creation
+ConfirmRegNum=xpath>//input[contains(@id,'paymentPage:paymentForm:confirm_no')]
+
+#Salesforce Login Page
+
+salesforceUser=xpath>//input[@id='username']
+#id>username
+#CSS>#username
+salesforcePwd=id>password
+SalesforceLogin=id>Login
+
+
+#CaptureSignature
+
+CS_returntoQuote=xpath>//input[@value='Return to Quote']
+CS_ErrorMsg=xpath>//span[@class='slds-form-element__label slds-text-body_regular']
+
+Pay_returntoQuote=xpath>//input[@value='Back To Quote']
+Capsign_Btn=xpath>//td[@id='topButtonRow']/input[@name='cpq_capture_signature']
+SelectConsultnBtn=xpath>//parent::td[@id='topButtonRow']//input[@title='Select Consultation']
+pay_ErrorMsg=xpath>//label[@class='slds-form-element__label slds-text-body_regular']
+
+payment_btn=xpath>//td[@id='topButtonRow']/input[@name='cpq_check_payment']
+
+SC_Message=xpath>//label[@class='slds-form-element__label slds-text-body_regular']
+SC_returntoquote=xpath>//input[@value='Back To Quote']
+
+
+#Capture signature page
+VerificationChkBx=xpath>//span[@class='slds-checkbox_faux']
+CaptAckndgBtn=xpath>//button[contains(text(),'Capture Acknowledgement')]
+SubmitBtnAuthMethod=xpath>//div[@data-section="Voice Verify"]//child::button[contains(text(),'Submit')]
+
+SelectConsult=xpath>//div[@class='slds-m-horizontal_small']/select/option[@selected='selected'] 
+
+#------------------------------------------------------------------------------------------------------------------
+#Addonvalidatexpath
+
+SWBsWebDig=xpath>//span[contains(text(),'Website Design Fee')]//ancestor::sb-swipe-container//child::sb-group//div[@id='s']//child::paper-radio-button
+
+SWBsAddPages=xpath>//span[contains(text(),'5 Additional Pages')]//ancestor::sb-swipe-container//child::sb-group//div[@id='s']//child::paper-checkbox
+SWBsAppointment=xpath>//span[contains(text(),'Appointment Scheduling')]//ancestor::sb-swipe-container//child::sb-group//div[@id='s']//child::paper-checkbox
+SWBsDcart=xpath>//span[contains(text(),'DIY Shopping Cart- 10 Items')]//ancestor::sb-swipe-container//child::sb-group//div[@id='s']/child::paper-checkbox
+SWBsDDMN=xpath>//span[contains(text(),'Included Domain w/ Website')]//ancestor::sb-swipe-container//child::sb-group//div[@id='s']/child::paper-checkbox
+SWBsphotoMotion=xpath>//span[contains(text(),'30 Sec. Photomotion Video')]//ancestor::sb-swipe-container//child::sb-group//div[@id='s']/child::paper-checkbox
+
+SWBsSave=xpath>//sb-i18n[text()='Save']
+
+
+
+AddProductCBconfig1=//span[text()=
+AddProductCBconfig2=]//ancestor::sb-swipe-container//descendant::sb-actions/child::span
+
+#---------------------------------------------------------------------------------------------------------------------------------------
+#Starter Website:
+
+prodCodeProdSW=xpath>//span[contains(text(),'Starter Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodDesProdSW=xpath>//span[contains(text(),'Starter Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPProdSW=xpath>//span[contains(text(),'Starter Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+#Std Website:
+
+prodCodeProdStd=xpath>//span[contains(text(),'Standard Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodDesProdStd=xpath>//span[contains(text(),'Standard Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPProdStd=xpath>//span[contains(text(),'Standard Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+
+#Std Website SB:
+
+prodCodeProdStdSB=xpath>//span[contains(text(),'Standard Website - Spread Billing')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodDesProdStdSB=xpath>//span[contains(text(),'Standard Website - Spread Billing')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPProdStdSB=xpath>//span[contains(text(),'Standard Website - Spread Billing')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+
+#ProWebsite:
+
+prodCodeProdPro=xpath>//span[contains(text(),'Pro Website ')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodDesProdPro=xpath>//span[contains(text(),'Pro Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPProdPro=xpath>//span[contains(text(),'Pro Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+
+#ProWebsite SB :
+
+prodCodeProdProSB=xpath>//span[contains(text(),'Pro Website - Spread Billing')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodDesProdProSB=xpath>//span[contains(text(),'Pro Website - Spread Billing')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPProdProSB=xpath>//span[contains(text(),'Pro Website - Spread Billing')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------
+#WebsiteDesignFee:(Stater, Std,Std Sp,Pro,Pro Sp)
+
+prodCodeWDF=xpath>//span[contains(text(),'Website Design Fee')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodNmDesWDF=xpath>//span[contains(text(),'Website Design Fee')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPWDF=xpath>//span[contains(text(),'Website Design Fee')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+#DIY Shopping Cart- 10 Items(Starter,Pro,Pro Sp)
+
+prodCodeDIY=xpath>//span[contains(text(),'DIY Shopping Cart')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodNmDesDIY=xpath>//span[contains(text(),'DIY Shopping Cart')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPDIY=xpath>//span[contains(text(),'DIY Shopping Cart')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+#Included Domain w/ Website(Std,Std sp,Pro,Pro Sp)
+
+prodCodeIDW=xpath>//span[contains(text(),'Included Domain w/ Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodNmDesIDW=xpath>//span[contains(text(),'Included Domain w/ Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPIDW=xpath>//span[contains(text(),'Included Domain w/ Website')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+#5 Additional Pages(Std,Std sp,Pro,Pro Sp)
+
+prodCodeAddPages=xpath>//span[contains(text(),'5 Additional Pages')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodNmDesAddPages=xpath>//span[contains(text(),'5 Additional Pages')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPAddPages=xpath>//span[contains(text(),'5 Additional Pages')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+
+
+#Photomotion(Std,Std sp,Pro,Pro sp)
+
+prodCodephoto=xpath>//span[contains(text(),'30 Sec. Photomotion Video')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodNmDesPhoto=xpath>//span[contains(text(),'30 Sec. Photomotion Video')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPphoto=xpath>//span[contains(text(),'30 Sec. Photomotion Video')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+	
+#Appointment Scheduling(Pro,Pro Sp)
+
+prodCodeAppointment=xpath>//span[contains(text(),'Appointment Scheduling')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductCode')]//span[@id='me']
+
+prodNmDesAppointment=xpath>//span[contains(text(),'Appointment Scheduling')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'ProductDes')]//span[@id='me']
+
+UnitPAppointment=xpath>//span[contains(text(),'Appointment Scheduling')]//ancestor::sb-swipe-container//sb-option-cell[contains(@item,'Unit')]//span[@id='me']
+
+
+#----------------------------------DIG-293
+CBPSave=xpath>//sb-i18n[text()='Choose Price Book']//following::sb-i18n[text()='Save']
+POSSave=xpath>//button[text()='Save']
+quoteStatus=xpath>//td//span[contains(text(),'Status')]/following::div
+oppOnQtepage=xpath>//span[(text()='Opportunity')]/following::a
+stageonOpp=xpath>//td[text()='Stage']/following-sibling::td/div
+
+choosebk=xpath>//div[@class='content style-scope sb-pricebook-dialog']//following::sb-select[@id='select']//select
+
+contactlinkonOpp=xpath>//a[@class='linklet']/span[contains(text(),'Contracts')]
+liveSublink=xpath>//a[@class='linklet']/span[contains(text(),'Live Subscriptions')]
+
+contoncontNum=xpath>//td[contains(text(),'Contract Number')]//following::div[@id='ctrc2_ileinner']
+
+Continopp=xpath>//th[contains(text(),'Contract Number')]//ancestor::tr[@class='headerRow']//following::tr[@class='dataRow even last first']//th[@class=' dataCell  ']//a
+
+OrderStageValue=xpath>//td[text()='Order Stage']/following-sibling::td/div
+SubmitQteBtn=xpath>//td[@id='topButtonRow']//input[@title='Submit Quote']
+SubmitQuoteAlert=xpath>//div[@class='slds-form-element__label slds-text-body_regular slds-m-bottom_small']//span[1]//descendant::b
+SQReturntoQuote=xpath>//input[@value='Return to Quote']
+
+#____________________
+configProdSave=xpath>//h1[text()='Configure Products']//following::sb-i18n[text()='Save']
